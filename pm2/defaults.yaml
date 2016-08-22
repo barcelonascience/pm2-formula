@@ -1,0 +1,6 @@
+pm2:
+  version: latest
+  user: root
+  startup:
+    platform: ''
+  apps: {}

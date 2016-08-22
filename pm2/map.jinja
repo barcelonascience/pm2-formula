@@ -1,0 +1,7 @@
+{% import_yaml "pm2/defaults.yaml" as default_settings %}
+
+{% set pm2 = salt['pillar.get'](
+  'pm2',
+  default=default_settings.pm2,
+  merge=True
+) %}
