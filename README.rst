@@ -39,9 +39,9 @@ Starts PM2 apps defined in the pillar.
 ``pm2.delete``
 --------------
 
-Deletes PM2 apps defined as `absent` in the pillar.
+Deletes PM2 apps defined as 'absent' in the pillar.
 
 ``pm2.save``
 ------------
 
-Save PM2 current process list. Uses startup script `home_path` if defined.
+Save PM2 current process list. Uses startup script 'home_path' if defined.
