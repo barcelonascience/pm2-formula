@@ -1,17 +1,24 @@
 pm2:
   version: latest
+  ## User which will run PM2 commands. Defaults to root
   user: root
+  ## Startup script options
   startup:
     platform: systemd
+    # The 'home_path' option will be used for 'pm2.save' if defined
     home_path: /var/pm2
+  ## List of applications running through PM2
   apps:
     example:
       main_file: server.js
       directory: /opt/example
+      # Your app arguments
       args:
         - 8080
+      # You can pass any valid PM2 option here. See 'pm2 --help'
       options:
         log: /var/log/example.log
         log-date-format: llll
+    # To delete an app, set 'absent' to True
     example_2:
       absent: True
