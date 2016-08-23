@@ -13,3 +13,5 @@ pm2:
       options:
         log: /var/log/example.log
         log-date-format: llll
+    example_2:
+      absent: True

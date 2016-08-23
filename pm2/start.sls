@@ -3,7 +3,7 @@
 include:
   - pm2
 
-{% for app_name, app in pm2.apps.items() %}
+{% for app_name, app in pm2.apps.items() if app.absent is not defined or not app.absent %}
 
 {% set start_cmd = { 'value': "pm2 start " ~ app.main_file ~ " --name=" ~ app_name } %}
 {% for option, value in app.get('options', {}).items() %}
