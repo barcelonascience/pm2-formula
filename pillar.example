@@ -6,9 +6,10 @@ pm2:
     home_path: /var/pm2
   apps:
     example:
-      main_file: /opt/example/server.js
+      main_file: server.js
+      directory: /opt/example
       args:
         - 8080
       options:
-        'log': /var/log/example.log
-        'log-date-format': llll
+        log: /var/log/example.log
+        log-date-format: llll
