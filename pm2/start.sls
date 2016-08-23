@@ -1,7 +1,7 @@
 {% from "pm2/map.jinja" import pm2 with context %}
 
 include:
-  - pm2
+  - pm2.install
 
 {% for app_name, app in pm2.apps.items() if app.absent is not defined or not app.absent %}
 

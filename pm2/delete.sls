@@ -1,5 +1,8 @@
 {% from "pm2/map.jinja" import pm2 with context %}
 
+include:
+  - pm2.install
+
 {% for app_name, app in pm2.apps.items() if app.absent is defined and app.absent %}
 
 delete_{{ app_name }}_pm2_process:

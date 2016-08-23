@@ -1,7 +1,7 @@
 {% from "pm2/map.jinja" import pm2 with context %}
 
 include:
-  - pm2
+  - pm2.install
 
 save_pm2_processes:
   cmd.run:
